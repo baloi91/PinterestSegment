@@ -439,7 +439,7 @@ extension UILabel {
             mutableAttributedString.append(attachmentStr)
         }
         if let text = self.text {
-            let textString = NSAttributedString(string: text, attributes: [.font: self.font, .foregroundColor: self.textColor])
+            let textString = NSAttributedString(string: text, attributes: [.font: self.font ?? UIFont.boldSystemFont(ofSize: 14), .foregroundColor: self.textColor ?? UIColor.lightGray])
             mutableAttributedString.append(textString)
         }
         self.attributedText = mutableAttributedString
